@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}
+
+div.Wrapper {
+	display:grid;
+	grid-template-columns:1fr 4fr 1fr;
+	grid-template-rows:63px 740px 948px;
+	grid-template-areas:
+	"header header header"
+	"content content content"
+	"footer footer footer";
+}
+
+div.header {
+	background-color: #505050;
+	grid-area:header;
+
+	/*display grid*/
+	display:grid;
+	grid-template-columns:1fr 5fr 1fr;
+	grid-template-rows:63px;
+	grid-template-areas:
+	". navbar .";
+	/*end of display*/
+}
+
+div.navbar {
+	grid-area:navbar;
+	z-index: 2;
+	align-self: center;
+	justify-self: center;
+}
+
+ul.navlinks {
+	list-style-type: none;
+	margin-top: 0;
+}
+
+ul.navlinks li {
+	float:left;
+	padding:15px;
+	color:white;
+}
+
+ul.navlinks > li > img {
+    position: absolute;
+    width: 213px;
+    height: 97px;
+    top: 15px;
+    left: 409px;
+	z-index: -1;
+	clip: rect(48px,157px,65px,61px);
+}
+
+ul.navlinks li a{
+	float:left;
+	padding:15px;
+	text-decoration: none;
+	color:white;
+	font-size: 10px;
+	font-family: LatoLatinWebBlack;
+}
+
+ul.navlinks li a > img{
+    position: absolute;
+    width: 271px;
+    height: 131px;
+    top: -23px;
+    left: 409px;
+    z-index: -1;
+	clip: rect(0px,165px,98px,46px);
+}
+
+div.content {
+	background-color: rgb(255,255,255);
+	grid-area:content;
+}
+
+.content > hr.left {
+	display:block;
+	width: 450px;
+	margin-top:10px;
+	margin-left:10px;
+	float: left;
+}
+
+.content > hr.right {
+	display:block;
+	width: 420px;
+	margin-top:10px;
+	margin-right:10px;
+	float: right;
+}
+
+.content > hr.buttom {
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-right: 20px;
+}
+
+.content > ul.boxes {
+	margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.content > ul.boxes > li {
+	float: left;
+	list-style-type: none;
+}
+
+.content > ul.boxes > li div.box {
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	margin-left:4px;
+	border-radius: 5px;
+}
+
+.content > ul.boxes > li div.box.active {
+	background-color: #189acc;
+}
+
+div.footer {
+	background-color: rgb(255,255,255);
+	grid-area:footer;
+
+	display:grid;
+	grid-template-columns:1fr 4fr 1fr;
+	grid-template-rows:341px 564px 43px;
+	grid-template-areas:
+	"about about about "
+	"contact contact contact"
+	"copy copy copy";
+}
+
+
+div.footer > div.about{
+	background-color: rgb(46,179,152);
+	grid-area:about;
+
+	display:grid;
+	grid-template-columns:1fr 5fr 1fr;
+	grid-template-rows:auto;
+	grid-template-areas:
+	". content .";
+}
+
+.footer > .about > div.content {
+	background-color: rgb(46,179,152);
+	grid-area:content;
+	margin:20px 0;
+	border-left: 1px solid rgb(33,157,132);
+	border-right: 1px solid rgb(33,157,132);
+
+	display:grid;
+	grid-template-columns:200px 4fr;
+	grid-template-rows:auto;
+	grid-template-areas:
+	"image about about";
+}
+
+.footer > .about > div.content > .image {
+	grid-area:image;
+}
+
+/* Hexagon for the image*/
+.hexagon {
+  position: relative;
+  width: 190px; 
+  height: 109.70px;
+  background-color: #64C7CC;
+  margin: 54.85px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 95px solid transparent;
+  border-right: 95px solid transparent;
+}
+/* Hexagon for the image*/
+
+.footer > .about > div.content > .about {
+	grid-area:about;
+	margin-top: 66px;
+}
+
+.footer > .about > div.content > .about > h1,
+.footer > .about > div.content > .about > h3 {
+	font-family: "Maven Pro";
+	color: white;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	margin: 0;
+	padding: 0;
+}
+
+.footer > .about > div.content > .about > h1 {
+	font-size: 24px;
+}
+
+.footer > .about > div.content > .about > h3 {
+	font-size: 18px;
+	color: rgb(32, 129, 109);
+}
+
+.footer > .about > div.content > .about > p {
+	font-family: LatoLatinWebBlack;
+	font-size: 12px;
+	color: white;
+}
+
+.footer > .about > div.content > .about > .social {
+	width: 147px;
+	height: 24px;
+	background-color: blue;
+	float: right;
+	margin-right: 20px;
+	margin-top: 42px;
+}
+
+.footer > .about > div.content > .about > .social > ul.social-icon {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.footer > .about > div.content > .about > .social > ul.social-icon > li {
+	display: block;
+	float: left;
+	width: 24.5px;
+	min-height: 24px;
+	max-height: 24px;
+	text-align: center;
+}
+.footer > .about > div.content > .about > .social > ul.social-icon > li > i {
+	padding-top: 4px;
+}
+
+
+
+div.footer > div.contact{
+	background-color: rgb(50,50,50);
+	grid-area:contact;
+}
+
+div.footer > div.copyright{
+	background-color: rgb(34,34,34);
+	grid-area:copy;
+}
+
+div.contact > .wrapper {
+	margin: 10px 20px;
+	border-top: 2px solid rgb(43,43,43);
+	border-bottom: 2px solid rgb(43,43,43);
+	height: 540px;
+	display:flex;
+	font-family: LatoLatinWebBlack;
+}
+
+div.contact > .wrapper > .form {
+	padding-left: 140px;
+	align-self: center;
+	flex:3;
+	color: white;
+}
+
+h1.header {
+	margin:0;
+}
+
+h3.semi-header {
+	margin:0;
+}
+
+div.contact > .wrapper > .form > form > input , textarea {
+	display: block;
+	height: 39px;
+	width: 580px;
+	background-color: rgb(69, 69, 69);
+	color: white;
+	border: 0;
+	margin: 8px 0;
+	padding-left: 16px;
+	font-family: maven pro;
+}
+
+div.contact > .wrapper > .form > form > .message {
+	height: 150px;
+	line-height: 30px;
+}
+
+div.contact > .wrapper > .info {
+	align-self: center;
+	flex:1;
+	color:rgb(153,153,153);
+	padding-bottom: 60px;
+}
+
+div.contact > .wrapper > .info > p {
+	font-size: 13px;
+	font-weight: 2px;
+}
+
+div.contact > .wrapper > .info > p > strong {
+	font-size: 15px;
+	color:white;
+}
+
+div.contact > .wrapper > .info > ul {
+	list-style-type: none;
+	padding:0;
+}
+
+div.contact > .wrapper > .info > ul > li {
+	font-size:14px;
+}
+
+div.contact > .wrapper > .info > ul > li > i {
+	font-size:15px;
+	margin-right: 5px;
+	color: rgb(46,179,152)
+}
+
+div.copyright {
+	padding-top:15px;
+	padding-left:50px;
+	color: rgb(61,61,61);
+	font-family: Maven Pro;
+}
