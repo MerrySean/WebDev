@@ -1,0 +1,12 @@
+body > div {
+    padding-top: 100px;
+}
+
+div.p-2 {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
