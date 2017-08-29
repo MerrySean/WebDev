@@ -25,16 +25,20 @@
                         <!--start display Input-->
                         <div class="input-group">
                             <span id="label" class="input-group-addon"></span>
-                            <input id="display" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                            <input id="display" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" disabled="true">
                         </div>
                         <!--end display Input-->
+                    </div>
+                    <div class="card-body">
+                        <h6 id="n1" class="card-title">First Number:</h6>
+                        <h6 id="n2" class="card-title">Second Number:</h6>
                     </div>
                     <div class="card-body"> 
                         <div class="d-flex justify-content-around">
                             <div class="p-2"><button type="button" value="MC" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-warning">MC</button></div>
                             <div class="p-2"><button type="button" value="MR" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-warning">MR</button></div>
                             <div class="p-2"><button type="button" value="M+" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-warning">M+</button></div>
-                            <div class="p-2"><button type="button" value="M-" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-warning">M-</button></div>
+                            <div class="p-2"><button type="button" value="MS" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-warning">MS</button></div>
                             <div class="p-2"><button type="button" value="C" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-danger">C</button></div>
                         </div>
                         <div class="d-flex justify-content-around">
@@ -59,12 +63,16 @@
                             <div class="p-2"><button type="button" value="1&frasl;x" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-dark">1&frasl;x</button></div>
                         </div>
                         <div class="d-flex justify-content-around">
-                            <div class="p-2"><button type="button" value="0" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-dark">0</button></div>
                             <div class="p-2"><button type="button" value="." onclick='btnClick(this.value)' class="btn btn-lg btn-outline-dark">.</button></div>
+                            <div class="p-2"><button type="button" value="0" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-dark">0</button></div>
                             <div class="p-2"><button type="button" value="+/-" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-dark">+/-</button></div>
                             <div class="p-2"><button type="button" value="+" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-dark">+</button></div>
                             <div class="p-2"><button type="button" value="=" onclick='btnClick(this.value)' class="btn btn-lg btn-outline-dark">=</button></div>
                         </div>
+                    </div>
+                    <div class="card-body">
+                        <ul id="history" class="list-group">
+                        </ul>
                     </div>
                 </div>
                 <!--End of Calculator Display-->
