@@ -10,3 +10,9 @@ button {
     width: 100%;
 }
 
+.input-group-addon.white-none {
+    background-color: white;
+    border: none;
+    height: 25px;
+}
+

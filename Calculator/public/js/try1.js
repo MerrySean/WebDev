@@ -4,7 +4,7 @@ var arrayInput = [];
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 var operator = ['*', '/', '√','-','%','1⁄x', '+'];
-var special = ['MC', 'M+', 'MS', 'MR', 'C', '=', '.', '+/-'];
+var special = ['MC', 'M+', 'MS', 'MR', 'C', '=', '.', '+/-','<','π','x^2','Ans','x^y'];
 
 //this is where you can the the numbers eveytime you click on a number button
 var display = document.getElementById("display");
@@ -83,6 +83,8 @@ function btnClick(value){
         if(newnum === true){
            newnum = false;
         }
+
+        //for operator
         if(opClicked){
           opClicked = false;   
         }
@@ -196,6 +198,27 @@ function btnClick(value){
                   calculate(equation.innerHTML)
                }
             }
+        }else if(value == "<"){
+            if(display.value !== ""){
+                display.value = display.value.slice(0, -1);
+            }else{
+                arrayInput.splice(-1,1);
+                equation.innerHTML = arrayInput.toString().replace(/,/g,' ');
+                if(label.innerHTML !== ""){
+                    label.innerHTML = "";
+                }
+            }
+        }else if(value == "π"){
+            display.value += '3.1415926535';
+        }else if(value == "x^2"){
+            //x to the power of 2
+            var squared = parseFloat(display.value);
+            // display.value = 
+        }else if(value == 'Ans'){
+            display.value += ans;
+        }else if(value == 'x^y'){
+            //x to the power of y
+            
         }
     }
 }
@@ -212,6 +235,8 @@ function calculate(inputs){
     addhistory(equation.innerHTML, total);
   
     dotbtn = false;
+
+    ans = total;
 }
 
 //calculate a 1 number expression
