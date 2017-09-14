@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="./public/css/bootstrap.css">
+        <link rel="stylesheet" href="./public/css/style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="d-flex justify-content-around">
+                        <!-- Registration Form -->
+                        <div class="d-flex justify-content-center">
+                            <div class="p-2">
+                                <div class="card m-4">
+                                    <div class="card-body pb-0">
+                                        <div class="card-title">
+                                            <h1>Register Here! </h1>    
+                                        </div>
+                                    </div>
+                                    <Form name="registration">
+                                        <div class="card-body pt-0 pb-0">
+                                            <hr COLOR="black">
+                                            <div class="d-flex flex-column">
+                                                <div class="form-group p-1 mb-2">
+                                                    <input type="text" class="form-control" id="fname" placeholder="First name">
+                                                </div>
+                                                <div class="form-group p-1 mb-2">
+                                                    <input type="text" class="form-control" id="lname" placeholder="Last name">
+                                                </div>
+                                                <div class="p-1">
+                                                    <div class="d-flex justify-content-around">
+                                                        <div class="form-check p-2">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="gender" id="genderRadio" value="male">
+                                                                Male
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check p-2">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="gender" id="genderRadio" value="female">
+                                                                Female
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group p-1 mb-2">
+                                                    <input type="text" class="form-control" id="bday" placeholder="Birthday">
+                                                </div>
+                                                <div class="form-group p-1 mb-2">
+                                                    <input type="text" class="form-control" id="age" placeholder="age" disabled="true">
+                                                </div>
+                                                <select class="form-control" name="course" id="crs">
+                                                    <option disabled selected>Select Course</option>
+                                                    <option value="BSIT">Bachelor of Information Technology</option>
+                                                    <option value="BSCS">Bachelor of Computer Science</option>
+                                                    <option value="BSIS">Bachelor of Information System</option>
+                                                </select>
+                                                <div class="p-1">
+                                                    <div class="d-flex justify-content-around">
+                                                        <div class="form-check p-2">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="stdtype" id="studentType" value="Irregular">
+                                                                Irregular
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check p-2">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="stdtype" id="studentType" value="Regular">
+                                                                Regular
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="m-0"COLOR="black">
+                                        </div>
+                                        <div class="card-body pt-3 m-0">
+                                            <div class="d-flex justify-content-around">
+                                                <div class="p-2">
+                                                    <button class="btn btn-primary" onclick="submit()">Submit</button>
+                                                </div>
+                                                <div class="p-2">
+                                                    <button class="btn btn-primary" onclick="cancel()">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Registration Form -->
+
+                        <div class="d-flex justify-content-center">
+                            <div class="p-2">
+                                <div class="card m-4">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h1>Registered Accounts</h1>
+                                        </div>
+                                        <hr color="black">
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                        <hr color="black">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+
+        <script src="./public/js/bootstrap.js"></script>
+    </body>
+</html>
