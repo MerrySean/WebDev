@@ -8,3 +8,32 @@ body {
 hr {
     color: #123455;
 }
+
+.max-width-10 {
+    min-width: 10px
+}
+
+.print {
+    visibility: hidden;
+}
+
+@media print {
+    #FormAndList {
+      visibility: hidden;
+    }
+    .printThis{
+      visibility: visible;
+    }
+    .print.top{
+      position: absolute;
+      left: 50;
+      top: 50;
+    }
+    .print.center{
+        position: absolute;
+        left: 200;
+        top: 50;
+    }
+}
+
+
