@@ -78,6 +78,7 @@ function CheckIfAllInputHasValue(){
        StdType.value !== ""){
         return true;
     }
+    alert("Complete the form")
     return false
 }
 
@@ -121,7 +122,7 @@ function PrintMasterlist() {
 }
 
 function PrintThisData(data){
-    $('#perAcc').addClass("printThis center")
+    $('#perAcc').addClass("printThis")
     $('#Masterlist').removeClass("printThis top")
 
     var AccountIndex = data[data.length - 1];

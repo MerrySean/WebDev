@@ -1,218 +1,227 @@
-<html>
-    <head>
-        <title>Registration Form</title>
-        <link rel="stylesheet" href="./public/css/bootstrap.css">
-        <link rel="stylesheet" href="./public/css/bootstrap-datepicker3.css">
-        <link rel="stylesheet" href="./public/css/style.css">
-        <script src="https://use.fontawesome.com/2a3c950546.js"></script>
-    </head>
-    <body>
-        <div class="container" id="FormAndList">
-            <div class="d-flex justify-content-around">
-                        <!-- Registration Form -->
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <div class="card m-4">
-                                    <div class="card-body pb-0">
-                                        <div class="card-title">
-                                            <h1>Register Here! </h1>    
+    <html>
+        <head>
+            <title>Registration Form</title>
+            <link rel="stylesheet" href="./public/css/bootstrap.css">
+            <link rel="stylesheet" href="./public/css/bootstrap-datepicker3.css">
+            <link rel="stylesheet" href="./public/css/style.css">
+            <script src="https://use.fontawesome.com/2a3c950546.js"></script>
+        </head>
+        <body>
+            <div class="container" id="FormAndList">
+                <div class="d-flex justify-content-around">
+                            <!-- Registration Form -->
+                            <div class="d-flex justify-content-center">
+                                <div class="p-2">
+                                    <div class="card m-4">
+                                        <div class="card-body pb-0">
+                                            <div class="card-title">
+                                                <h1>Register Here! </h1>    
+                                            </div>
                                         </div>
+                                        <Form name="registration" onsubmit="return false;">
+                                            <div class="card-body pt-0 pb-0">
+                                                <hr COLOR="black">
+                                                <div class="d-flex flex-column">
+                                                    <div class="form-group p-1 mb-2">
+                                                        <input type="text" class="form-control" id="fname" placeholder="First name">
+                                                    </div>
+                                                    <div class="form-group p-1 mb-2">
+                                                        <input type="text" class="form-control" id="lname" placeholder="Last name">
+                                                    </div>
+                                                    <div class="p-1">
+                                                        <div class="d-flex justify-content-around">
+                                                            <div class="form-check p-2">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio" name="gender" id="genderRadio" value="male">
+                                                                    Male
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check p-2">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio" name="gender" id="genderRadio" value="female">
+                                                                    Female
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group date p-1 mb-2">
+                                                        <input type="text" class="form-control" id="Bdatepicker" placeholder="Birthday" onblur="dateblur()">
+                                                    </div>
+                                                    <div class="form-group p-1 mb-2">
+                                                        <input type="text" class="form-control" id="age" placeholder="age" disabled="true">
+                                                    </div>
+                                                    <select class="form-control" name="course" id="crs">
+                                                        <option disabled selected>Select Course</option>
+                                                        <option value="BSIT">Bachelor of Information Technology</option>
+                                                        <option value="BSCS">Bachelor of Computer Science</option>
+                                                        <option value="BSIS">Bachelor of Information System</option>
+                                                    </select>
+                                                    <div class="p-1">
+                                                        <div class="d-flex justify-content-around">
+                                                            <div class="form-check p-2">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio" name="stdtype" id="studentType" value="Irregular">
+                                                                    Irregular
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check p-2">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio" name="stdtype" id="studentType" value="Regular">
+                                                                    Regular
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr class="m-0"COLOR="black">
+                                            </div>
+                                            <div class="card-body pt-3 m-0">
+                                                <div class="d-flex justify-content-around">
+                                                    <div class="p-2">
+                                                        <button class="btn btn-primary" id="submitForm">Submit</button>
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <button class="btn btn-primary" onclick="cancel()">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Form>
                                     </div>
-                                    <Form name="registration" onsubmit="return false;">
-                                        <div class="card-body pt-0 pb-0">
-                                            <hr COLOR="black">
-                                            <div class="d-flex flex-column">
-                                                <div class="form-group p-1 mb-2">
-                                                    <input type="text" class="form-control" id="fname" placeholder="First name">
-                                                </div>
-                                                <div class="form-group p-1 mb-2">
-                                                    <input type="text" class="form-control" id="lname" placeholder="Last name">
-                                                </div>
-                                                <div class="p-1">
-                                                    <div class="d-flex justify-content-around">
-                                                        <div class="form-check p-2">
-                                                            <label class="form-check-label">
-                                                                <input class="form-check-input" type="radio" name="gender" id="genderRadio" value="male">
-                                                                Male
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check p-2">
-                                                            <label class="form-check-label">
-                                                                <input class="form-check-input" type="radio" name="gender" id="genderRadio" value="female">
-                                                                Female
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group date p-1 mb-2">
-                                                    <input type="text" class="form-control" id="Bdatepicker" placeholder="Birthday" onblur="dateblur()">
-                                                </div>
-                                                <div class="form-group p-1 mb-2">
-                                                    <input type="text" class="form-control" id="age" placeholder="age" disabled="true">
-                                                </div>
-                                                <select class="form-control" name="course" id="crs">
-                                                    <option disabled selected>Select Course</option>
-                                                    <option value="BSIT">Bachelor of Information Technology</option>
-                                                    <option value="BSCS">Bachelor of Computer Science</option>
-                                                    <option value="BSIS">Bachelor of Information System</option>
-                                                </select>
-                                                <div class="p-1">
-                                                    <div class="d-flex justify-content-around">
-                                                        <div class="form-check p-2">
-                                                            <label class="form-check-label">
-                                                                <input class="form-check-input" type="radio" name="stdtype" id="studentType" value="Irregular">
-                                                                Irregular
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check p-2">
-                                                            <label class="form-check-label">
-                                                                <input class="form-check-input" type="radio" name="stdtype" id="studentType" value="Regular">
-                                                                Regular
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr class="m-0"COLOR="black">
-                                        </div>
-                                        <div class="card-body pt-3 m-0">
-                                            <div class="d-flex justify-content-around">
-                                                <div class="p-2">
-                                                    <button class="btn btn-primary" id="submitForm">Submit</button>
-                                                </div>
-                                                <div class="p-2">
-                                                    <button class="btn btn-primary" onclick="cancel()">Cancel</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Form>
                                 </div>
                             </div>
-                        </div>
-                        <!-- End of Registration Form -->
+                            <!-- End of Registration Form -->
 
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <div class="card m-4">
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Registered Accounts</h1>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-2">
+                                    <div class="card m-4">
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                <h1>Registered Accounts</h1>
+                                            </div>
+                                            <hr color="black">
                                         </div>
-                                        <hr color="black">
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <button onclick="PrintMasterlist()" class="btn btn-primary mb-2 d-flex ml-auto p-2" data-toggle="popover" title="Print the Whole Masterlist"><i class="fa fa-print mr-1" aria-hidden="true"></i>Print</button>
-                                        <!--Registered Accounts Here-->
-                                        <div id="accordion" role="tablist">
-                                            <!-- Every time a new account has been register javascript will append a code in here -->
+                                        <div class="card-body pt-0">
+                                            <button onclick="PrintMasterlist()" class="btn btn-primary mb-2 d-flex ml-auto p-2" data-toggle="popover" title="Print the Whole Masterlist"><i class="fa fa-print mr-1" aria-hidden="true"></i>Print</button>
+                                            <!--Registered Accounts Here-->
+                                            <div id="accordion" role="tablist">
+                                                <!-- Every time a new account has been register javascript will append a code in here -->
+                                            </div>
+                                            <hr color="black">
                                         </div>
-                                        <hr color="black">
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                </div>
             </div>
-        </div>
+
+                    
+            <!-- Printing Area -->
+                <!-- print the whole masterlist of registered account -->
+            <div class="container">
+                <div class="print" id="Masterlist">
+                    <div class="Logoheader">
+                        <img src="./public/img/Header.jpg" alt="header" class="img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <h3 class="m-5">Registered Accounts</h3>
+                    </div>
+                    <table class="table table-striped table-bordered" id="Masterlist-table">
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Gender</th>
+                            <th>Birthday</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                            <th>Student Type</th>
+                        </tr>
+                        <!-- Data will be inserted once user clicks on print button -->
+                    </table>
+                </div>
+                
+                    <!-- Print a specific account data -->
+                <div class="print" id="perAcc">
+                    <div class="Logoheader">
+                        <img src="./public/img/Header.jpg" alt="header" class="img-fluid">
+                    </div>
+                    <div class="card center" id="perAcc-card" style="width: 20rem;">
+                        <!-- data will be inserted once user clicks on print button -->
+                    </div>
+                </div>
+            </div>
+            <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+            <script src="./public/js/bootstrap.js"></script>
+            <script src="./public/js/bootstrap-datepicker.js"></script>
+            <script src="./public/js/app.js"></script>
+
+            <script type="text/javascript">
+                $('#Bdatepicker').datepicker();
+            </script>
 
 
-        <!-- Printing Area -->
-            <!-- print the whole masterlist of registered account -->
-        <div class="container">
-            <div class="print" id="Masterlist">
-                <table class="table table-striped table-bordered" id="Masterlist-table">
+                <script type="text/template" data-template="listitem">
+                    <div class="card max-width-10">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="float-left mb-0">
+                                    <a data-toggle="collapse" href="#${itemId}" aria-expanded="true" aria-controls="${itemId}">
+                                            ${FullName}
+                                    </a>
+                                </h5>
+                                <button data-toggle="popover" value="${itemId}" onclick="PrintThisData(this.value)" title="Print this specific Account information" class="btn btn-primary d-flex ml-auto p-1"><i class="fa fa-print" aria-hidden="true"></i></button>
+                            </div>
+
+                            <div id="${itemId}" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    Firstname: ${Fname} <br>
+                                    Lastname: ${Lname} <br>
+                                    Gender: ${Gnd} <br>
+                                    Birthday: ${Bday}<br>
+                                    Age: ${age} <br>
+                                    Course: ${Crs} <br>
+                                    Student type: ${SdtType} <br>
+                                </div>
+                            </div>
+                    </div>  
+                </script>
+                <script type="text/template" data-template="PrintMasterList">
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Gender</th>
-                        <th>Birthday</th>
-                        <th>Age</th>
-                        <th>Course</th>
-                        <th>Student Type</th>
+                            <td>${Fname}</td>
+                            <td>${Lname}</td>
+                            <td>${Gnd}</td>
+                            <td>${Bday}</td>
+                            <td>${age}</td>
+                            <td>${Crs}</td>
+                            <td>${SdtType}</td>
                     </tr>
-                    <!-- Data will be inserted once user clicks on print button -->
-                </table>
-            </div>
-            
-                <!-- Print a specific account data -->
-            <div class="print" id="perAcc">
-                <div class="card" id="perAcc-card" style="width: 20rem;">
-                    <!-- data will be inserted once user clicks on print button -->
-                </div>
-            </div>
-        </div>
-        <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="./public/js/bootstrap.js"></script>
-        <script src="./public/js/bootstrap-datepicker.js"></script>
-        <script src="./public/js/app.js"></script>
+                </script>
 
-        <script type="text/javascript">
-            $('#Bdatepicker').datepicker();
-        </script>
+                <script type="text/template" data-template="PrintMasterlistHeader">
+                    <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Gender</th>
+                            <th>Birthday</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                            <th>Student Type</th>
+                    </tr>
+                </script>
 
-
-            <script type="text/template" data-template="listitem">
-                <div class="card max-width-10">
-                        <div class="card-header" role="tab" id="headingOne">
-                            <h5 class="float-left mb-0">
-                                <a data-toggle="collapse" href="#${itemId}" aria-expanded="true" aria-controls="${itemId}">
-                                        ${FullName}
-                                </a>
-                            </h5>
-                            <button data-toggle="popover" value="${itemId}" onclick="PrintThisData(this.value)" title="Print this specific Account information" class="btn btn-primary d-flex ml-auto p-1"><i class="fa fa-print" aria-hidden="true"></i></button>
-                        </div>
-
-                        <div id="${itemId}" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body">
-                                Firstname: ${Fname} <br>
-                                Lastname: ${Lname} <br>
-                                Gender: ${Gnd} <br>
-                                Birthday: ${Bday}<br>
-                                Age: ${age} <br>
-                                Course: ${Crs} <br>
-                                Student type: ${SdtType} <br>
-                            </div>
-                        </div>
-                </div>  
-            </script>
-            <script type="text/template" data-template="PrintMasterList">
-                <tr>
-                        <th>${Fname}</th>
-                        <th>${Lname}</th>
-                        <th>${Gnd}</th>
-                        <th>${Bday}</th>
-                        <th>${age}</th>
-                        <th>${Crs}</th>
-                        <th>${SdtType}</th>
-                </tr>
-            </script>
-
-            <script type="text/template" data-template="PrintMasterlistHeader">
-                <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Gender</th>
-                        <th>Birthday</th>
-                        <th>Age</th>
-                        <th>Course</th>
-                        <th>Student Type</th>
-                </tr>
-            </script>
-
-            <script type="text/template" data-template="PrintAccountinfo">
-                <div class="card-body">
-                    <h4 class="card-title">${Fname} ${Lname}</h4>
-                    <h6 class="card-subtitle mb-2 text-muted">${Crs}</h6>
-                    <p class="card-text">
-                        Firstname:    ${Fname} <br>
-                        Lastname:     ${Lname} <br>
-                        Gender:       ${Gnd} <br>
-                        Birthday:     ${Bday} <br>
-                        Age:          ${age} <br>
-                        Student Type: ${SdtType}
-                    </p>
-                </div>
-            </script>
-    </body>
-</html>
+                <script type="text/template" data-template="PrintAccountinfo">
+                    <div class="card-body">
+                        <h4 class="card-title">${Fname} ${Lname}</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">${Crs}</h6>
+                        <p class="card-text">
+                            Firstname:    ${Fname} <br>
+                            Lastname:     ${Lname} <br>
+                            Gender:       ${Gnd} <br>
+                            Birthday:     ${Bday} <br>
+                            Age:          ${age} <br>
+                            Student Type: ${SdtType}
+                        </p>
+                    </div>
+                </script>
+        </body>
+    </html>

@@ -25,14 +25,19 @@ hr {
       visibility: visible;
     }
     .print.top{
-      position: absolute;
-      left: 50;
-      top: 50;
+        position: absolute;
+        left: 50;
+        top: 50;
     }
-    .print.center{
+    .print{
+        position: absolute;
+        left: 50;
+        top: 50;
+    }
+    .center{
         position: absolute;
         left: 200;
-        top: 50;
+        top: 100;
     }
 }
 
