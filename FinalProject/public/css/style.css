@@ -1,0 +1,19 @@
+@keyframes appear{
+
+    0% {
+        
+    }
+
+    100% {
+        
+    }
+}
+
+#border1{
+    animation: appear 1s infinite;
+}
+
+#border2{
+    animation: appear 1s infinite;
+}
+
