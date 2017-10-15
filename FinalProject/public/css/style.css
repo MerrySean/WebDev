@@ -17,3 +17,15 @@
     animation: appear 1s infinite;
 }
 
+.d-flex > li {
+    list-style-type: none;
+}
+
+form > ul.d-flex > li {
+    margin-right: 5px
+}
+
+.card {
+    border: none
+}
+
